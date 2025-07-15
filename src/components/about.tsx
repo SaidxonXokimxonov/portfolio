@@ -23,9 +23,9 @@ export default function About() {
         wife and two cats, or running around Hyrule searching for Korok seeds K
         o r o k s e e d s .
       </h1>
-      <h2 className="flex mt-[50px] text-[#8296BD] hover:text-white cursor-pointer text-xl gap-2">
+      <a target="_blank" href={'https://firebasestorage.googleapis.com/v0/b/ibs-homework-website.appspot.com/o/Saidxon_Xokimxonov_Resume.pdf?alt=media&token=03be1f17-82f6-4bea-8aa3-41b8eb6445dc'} className="flex mt-[50px] text-[#8296BD] hover:text-white cursor-pointer text-xl gap-2">
         Open resume <LuArrowUpRight />
-      </h2>
+      </a>
     </div>
   );
 }
