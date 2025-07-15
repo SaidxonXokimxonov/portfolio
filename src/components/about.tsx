@@ -1,4 +1,3 @@
-import React from "react";
 import { LuArrowUpRight } from "react-icons/lu";
 
 export default function About() {

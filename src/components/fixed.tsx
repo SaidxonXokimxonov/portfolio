@@ -1,4 +1,3 @@
-import React from "react";
 import {FaGithub, FaInstagram, FaLinkedin, FaTelegram} from 'react-icons/fa'
 
 function Fixed() {
