@@ -50,7 +50,7 @@ export default function Projects() {
               </span>
             </div>
 
-            <div className="relative overflow-hidden rounded-lg border border-slate-700 w-[220px] sm:w-[170px] h-[150px] sm:h-full">
+            <div className="relative  overflow-hidden rounded-lg border border-red-700 w-[220px] sm:w-[170px] h-[150px] sm:h-full">
               <img
                 src={item.img}
                 alt={item.name}
