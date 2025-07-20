@@ -61,25 +61,28 @@ export const ProjectCard = ({ project }: { project: Project }) => {
 
         <p className="text-slate-300 mb-4">{project.shortDescription}</p>
 
-         <div className="flex flex-wrap gap-2 mb-4">
-          {project?.technologies.split(' ').slice(0,4).map((item)=> {
-            return <span
-              className="text-xs bg-slate-900/50 text-cyan-300 px-2 py-1 rounded"
-            >
-              {item}
-            </span>
-          }) }
-          {project?.technologies?.split(' ').length > 4 && (
+        <div className="flex flex-wrap gap-2 mb-4">
+          {project?.technologies
+            .split(" ")
+            .slice(0, 4)
+            .map((item) => {
+              return (
+                <span className="text-xs bg-slate-900/50 text-cyan-300 px-2 py-1 rounded">
+                  {item}
+                </span>
+              );
+            })}
+          {project?.technologies?.split(" ").length > 4 && (
             <span className="text-xs bg-slate-900/50 text-slate-400 px-2 py-1 rounded">
-              +{project?.technologies?.split(' ').length - 4}
+              +{project?.technologies?.split(" ").length - 4}
             </span>
           )}
         </div>
 
         <div className="flex justify-between items-center mt-4">
           <button
-            onClick={()=> navigate(`/projects/${project.id}`)}
-            className="text-sm font-medium text-slate-300 hover:text-white transition-colors flex items-center"
+            onClick={() => navigate(`/projects/${project.id}`)}
+            className="text-sm cursor-pointer font-medium text-slate-300 hover:text-white transition-colors flex items-center"
           >
             View Details
             <svg

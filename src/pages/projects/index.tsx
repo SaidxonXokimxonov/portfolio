@@ -19,7 +19,7 @@ export interface Project {
 export const AllProjects = () => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   async function getData() {
     try {
@@ -39,8 +39,11 @@ export const AllProjects = () => {
 
   return (
     <div className="min-h-screen bg-[#0F172A] text-white py-12 px-4 sm:px-6 lg:px-8">
-      <button onClick={()=> navigate('/')} className="flex items-center gap-2 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-[#1e293b] transition">
-       <BsArrowLeft />  Back to Home
+      <button
+        onClick={() => navigate("/")}
+        className="flex items-center gap-2 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-[#1e293b] transition"
+      >
+        <BsArrowLeft /> Back to Home
       </button>
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">

@@ -30,7 +30,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <div className="max-w-6xl mt-[80px] mx-auto">
+    <section id="project" className="w-full mt-[80px] mx-auto">
       <div className="w-[95%] flex flex-wrap justify-center gap-8 mx-auto sm:mx-0 sm:ps-[60px] pb-[30px]">
         {projects?.slice(0, 3)?.map((item) => (
           <Link
@@ -123,6 +123,6 @@ export default function Projects() {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { fetchProjects } from "../../config/request";
 import type { Project } from "../../components/projects";
+import { BsArrowLeft } from "react-icons/bs";
 
 export function SingleProject() {
   const { projectId } = useParams();
@@ -70,24 +71,11 @@ export function SingleProject() {
   return (
     <div className="min-h-screen bg-[#0F172A] text-white px-4 py-16">
       <div className="max-w-4xl mx-auto space-y-10">
-        {/* Back button */}
         <button
-          onClick={() => navigate(-1)}
-          className="flex items-center gap-2 text-[#94A3B8] hover:text-[#E2E8F0] transition-colors duration-300 group"
+          onClick={() => navigate("/")}
+          className="flex items-center gap-2 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-[#1e293b] transition"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5 group-hover:-translate-x-1 transition-transform duration-300"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L7.414 9H15a1 1 0 110 2H7.414l2.293 2.293a1 1 0 010 1.414z"
-              clipRule="evenodd"
-            />
-          </svg>
-          Back to all projects
+          <BsArrowLeft /> Back to Home
         </button>
 
         {/* Project header with gradient */}
@@ -228,25 +216,17 @@ export function SingleProject() {
                 </h2>
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
-                {project?.technologies
-                  .split(" ")
-                  .slice(0, 4)
-                  .map((item) => {
-                    return (
-                      <span className="text-xs bg-slate-900/50 text-cyan-300 px-2 py-1 rounded">
-                        {item}
-                      </span>
-                    );
-                  })}
-                {project?.technologies?.split(" ").length > 4 && (
-                  <span className="text-xs bg-slate-900/50 text-slate-400 px-2 py-1 rounded">
-                    +{project?.technologies?.split(" ").length - 4}
-                  </span>
-                )}
+                {project?.technologies.split(" ").map((item) => {
+                  return (
+                    <span className="text-xs bg-slate-900/50 text-cyan-300 px-2 py-1 rounded">
+                      {item}
+                    </span>
+                  );
+                })}
               </div>
             </div>
 
-            {/* Features card */}
+            {/* Features card
             <div className="bg-[#1E293B] p-6 rounded-xl shadow-lg border border-[#334155]">
               <div className="flex items-center gap-2 mb-4">
                 <svg
@@ -265,7 +245,7 @@ export function SingleProject() {
                   Key Features
                 </h2>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

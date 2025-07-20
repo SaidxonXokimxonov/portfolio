@@ -3,12 +3,17 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./app";
 import { BrowserRouter } from "react-router-dom";
-document.body.style.background = '#0F172A'
+import { Toaster } from "react-hot-toast";
+import CustomCursor from "./components/customCursor";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <StrictMode>
-      <App />
+      <>
+        <App />
+        <Toaster />
+        <CustomCursor />
+      </>
     </StrictMode>
   </BrowserRouter>
 );

@@ -7,7 +7,10 @@ import {
 
 export default function Skills() {
   return (
-    <div className="text-[#8296BD] mt-[50px] lg:mt-[100px] justify-center flex flex-wrap">
+    <section
+      id="skills"
+      className="text-[#8296BD] mt-[50px] lg:mt-[100px] justify-center flex flex-wrap"
+    >
       <div className="w-[140px] hover:text-white transition-all h-[140px] flex justify-center items-center flex-col gap-1 cursor-pointer">
         <FaHtml5 className="text-4xl" />
         <h5 className="text-2xl">Html</h5>
@@ -40,6 +43,6 @@ export default function Skills() {
         <BiLogoRedux className="text-4xl" />
         <h5 className="text-2xl">Redux</h5>
       </div>
-    </div>
+    </section>
   );
 }

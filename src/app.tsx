@@ -3,8 +3,12 @@ import Content from "./components/content";
 import { Route, Routes } from "react-router-dom";
 import { AllProjects } from "./pages/projects/index";
 import { SingleProject } from "./pages/projects/singleProject";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add("scroll-smooth");
+  }, []);
   return (
     <>
       <Routes>
